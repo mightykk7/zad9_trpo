@@ -24,6 +24,37 @@
         </Setter>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{DynamicResource OrangeBrush}"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Background" Value="{DynamicResource SuccessBrush}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="BackButton" TargetType="Button">
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="Padding" Value="10,5"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource BlueBrush}"/>
+        <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="6"
+                        Padding="{TemplateBinding Padding}">
+                        <ContentPresenter HorizontalAlignment="Center"
+                                      VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Background" Value="{DynamicResource DangerBrush}"/>
             </Trigger>
             <Trigger Property="IsPressed" Value="True">
@@ -42,7 +73,7 @@
                     CornerRadius="6"
                     Padding="{TemplateBinding Padding}">
                         <DockPanel>
-                        <ContentPresenter HorizontalAlignment="Center"
+                            <ContentPresenter HorizontalAlignment="Center"
                                   VerticalAlignment="Center"/>
                             <Label Content="+" Style="{DynamicResource LabelWithMargin}"/>
                         </DockPanel>
@@ -90,18 +121,18 @@
         <Setter Property="BorderBrush" Value="{DynamicResource DangerBrush}"/>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="{DynamicResource YellowBrush}"/>
+                <Setter Property="Background" Value="{DynamicResource DangerBrush}"/>
                 <Setter Property="Foreground" Value="White"/>
             </Trigger>
             <Trigger Property="IsPressed" Value="True">
-                <Setter Property="Background" Value="{DynamicResource OrangeBrush}"/>
+                <Setter Property="Background" Value="{DynamicResource VioletBrush}"/>
                 <Setter Property="Foreground" Value="White"/>
             </Trigger>
         </Style.Triggers>
     </Style>
 
     <Style x:Key="TextBlockWithMargin" TargetType="TextBlock">
-        <Setter Property="Margin" Value="0"/>
+        <Setter Property="Margin" Value="5"/>
         <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}"/>
     </Style>
 
@@ -120,12 +151,19 @@
     </Style>
 
     <Style x:Key="LabelWithMargin" TargetType="Label">
-        <Setter Property="Margin" Value="0"/>
         <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}"/>
     </Style>
 
     <Style x:Key="StackPanelBackground" TargetType="StackPanel">
         <Setter Property="Background" Value="{DynamicResource StackBackground}"/>
+    </Style>
+
+    <Style x:Key="StackPanelHorizontal" TargetType="StackPanel">
+        <Setter Property="Orientation" Value="Horizontal"/>
+    </Style>
+
+    <Style x:Key="StackPanelVertical" TargetType="StackPanel">
+        <Setter Property="Orientation" Value="Vertical"/>
     </Style>
 
     <Style x:Key="ListViewBackground" TargetType="ListView">
@@ -134,5 +172,19 @@
 
     <Style x:Key="MenuItemForeground" TargetType="MenuItem">
         <Setter Property="Foreground" Value="{StaticResource WindowBackground}"/>
+    </Style>
+    <Style x:Key="MenuStyle" TargetType="Menu">
+        <Setter Property="Background" Value="{DynamicResource StackBackground}"/>
+        <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}"/>
+    </Style>
+
+    <Style x:Key="MenuItemStyle" TargetType="MenuItem">
+        <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{DynamicResource BlueBrush}"/>
+            </Trigger>
+        </Style.Triggers>
     </Style>
 </ResourceDictionary>

@@ -14,18 +14,18 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
-            <StackPanel>
-                <Label Content="Имя:" HorizontalAlignment="Left"/>
-                <Label Content="Фамилия:" HorizontalAlignment="Left"/>
-                <Label Content="Отчество:" HorizontalAlignment="Left"/>
-                <Label Content="Специальность:" HorizontalAlignment="Left"/>
+        <StackPanel Grid.Row="0" Style="{StaticResource StackPanelHorizontal}">
+            <StackPanel Style="{StaticResource StackPanelVertical}">
+                <Label Content="Имя:" Style="{StaticResource LabelWithMargin}"/>
+                <Label Content="Фамилия:" Style="{StaticResource LabelWithMargin}"/>
+                <Label Content="Отчество:" Style="{StaticResource LabelWithMargin}"/>
+                <Label Content="Специальность:"  Style="{StaticResource LabelWithMargin}"/>
             </StackPanel>
-            <StackPanel>
-                <TextBlock Margin="0,5" Text="{Binding CurrentDoctor.Name}"/>
-                <TextBlock Margin="0,5" Text="{Binding CurrentDoctor.LastName}"/>
-                <TextBlock Margin="0,5" Text="{Binding CurrentDoctor.MiddleName}"/>
-                <TextBlock Margin="0,5" Text="{Binding CurrentDoctor.Specialisation}"/>
+            <StackPanel Style="{StaticResource StackPanelVertical}">
+                <TextBlock Text="{Binding CurrentDoctor.Name}" Style="{StaticResource TextBlockWithMargin}"/>
+                <TextBlock Text="{Binding CurrentDoctor.LastName}" Style="{StaticResource TextBlockWithMargin}"/>
+                <TextBlock Text="{Binding CurrentDoctor.MiddleName}" Style="{StaticResource TextBlockWithMargin}"/>
+                <TextBlock Text="{Binding CurrentDoctor.Specialisation}" Style="{StaticResource TextBlockWithMargin}"/>
             </StackPanel>
         </StackPanel>
 
@@ -36,26 +36,26 @@
             </Grid.ColumnDefinitions>
 
             <ListView Grid.Column="0"
-                  Margin="10"
                   ItemsSource="{Binding Pacients}"
-                  SelectedItem="{Binding SelectedPacient}">
+                  SelectedItem="{Binding SelectedPacient}"
+                  Style="{StaticResource ListViewBackground}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="5">
-                            <TextBlock Text="{Binding LastName}" FontWeight="Bold"/>
-                            <TextBlock Text="{Binding Name}"/>
-                            <TextBlock Text="{Binding MiddleName}"/>
-                            <TextBlock Text="{Binding Birthday, StringFormat='{}{0:dd.MM.yyyy}'}"/>
-                            <TextBlock Text="{Binding PhoneNumber}"/>
+                        <StackPanel Style="{StaticResource StackPanelVertical}">
+                            <TextBlock Text="{Binding LastName}" FontWeight="Bold" Style="{StaticResource TextBlockWithMargin}"/>
+                            <TextBlock Text="{Binding Name}" Style="{StaticResource TextBlockWithMargin}"/>
+                            <TextBlock Text="{Binding MiddleName}" Style="{StaticResource TextBlockWithMargin}"/>
+                            <TextBlock Text="{Binding Birthday, StringFormat='{}{0:dd.MM.yyyy}'}" Style="{StaticResource TextBlockWithMargin}"/>
+                            <TextBlock Text="{Binding PhoneNumber}" Style="{StaticResource TextBlockWithMargin}"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
 
-            <StackPanel Grid.Column="1" Margin="5" VerticalAlignment="Top">
-                <Button Content="Создать пациента" Height="30" Margin="0,5" Click="Button_Click"/>
-                <Button Content="Начать прием" Height="30" Margin="0,5" Click="Button_Click_1"/>
-                <Button Content="Изменить информацию" Height="30" Margin="0,5" Click="Button_Click_2"/>
+            <StackPanel Grid.Column="1" VerticalAlignment="Top" Style="{StaticResource StackPanelVertical}">
+                <Button Content="Создать пациента" Click="Button_Click" Style="{StaticResource AddButton}"/>
+                <Button Content="Начать прием" Click="Button_Click_1" Style="{StaticResource StandardButton}"/>
+                <Button Content="Изменить информацию" Click="Button_Click_2" Style="{StaticResource StandardButton}"/>
             </StackPanel>
         </Grid>
     </Grid>

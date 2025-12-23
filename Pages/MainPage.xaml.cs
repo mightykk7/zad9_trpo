@@ -57,6 +57,7 @@ namespace Zad8_trpo.Pages
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            if (SelectedPacient == null) return;
             NavigationService.Navigate(new UpdatePacient(SelectedPacient));
         }
     }

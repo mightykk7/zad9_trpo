@@ -9,22 +9,22 @@
       Title="UpdatePacient">
 
     <Grid>
-        <StackPanel Orientation="Horizontal">
-            <StackPanel>
-                <Label Content="Имя:"/>
-                <Label Content="Фамилия:"/>
-                <Label Content="Отчество:"/>
-                <Label Content="Дата рождения:"/>
-                <Label Content="Номер телефона:"/>
-                <Button Margin="0,5" Click="Button_Click_4">Изменить</Button>
-                <Button Margin="0,2" Click="Button_Click_5">Сбросить</Button>
+        <StackPanel Style="{StaticResource StackPanelHorizontal}">
+            <StackPanel Style="{StaticResource StackPanelVertical}">
+                <Label Content="Имя:" Style="{StaticResource LabelWithMargin}"/>
+                <Label Content="Фамилия:" Style="{StaticResource LabelWithMargin}"/>
+                <Label Content="Отчество:" Style="{StaticResource LabelWithMargin}"/>
+                <Label Content="Дата рождения:" Style="{StaticResource LabelWithMargin}"/>
+                <Label Content="Номер телефона:" Style="{StaticResource LabelWithMargin}"/>
+                <Button Click="Button_Click_4" Style="{StaticResource StandardButton}">Изменить</Button>
+                <Button Click="Button_Click_5" Style="{StaticResource DeleteButton}">Сбросить</Button>
             </StackPanel>
-            <StackPanel Width="135">
-                <TextBox Text="{Binding CurrentPacient.Name}"  Margin="0,5"></TextBox>
-                <TextBox Text="{Binding CurrentPacient.LastName}"  Margin="0,3"></TextBox>
-                <TextBox Text="{Binding CurrentPacient.MiddleName}"  Margin="0,5"></TextBox>
-                <DatePicker SelectedDate="{Binding CurrentPacient.Birthday}" ></DatePicker>
-                <TextBox Text="{Binding CurrentPacient.PhoneNumber}"  Margin="0,5"></TextBox>
+            <StackPanel Width="135" Style="{StaticResource StackPanelVertical}">
+                <TextBox Text="{Binding CurrentPacient.Name}" Style="{StaticResource TextBoxWithMargin}"/>
+                <TextBox Text="{Binding CurrentPacient.LastName}" Style="{StaticResource TextBoxWithMargin}"/>
+                <TextBox Text="{Binding CurrentPacient.MiddleName}" Style="{StaticResource TextBoxWithMargin}"/>
+                <DatePicker SelectedDate="{Binding CurrentPacient.Birthday}" Style="{StaticResource DatePickerWithMargin}"/>
+                <TextBox Text="{Binding CurrentPacient.PhoneNumber}" Style="{StaticResource TextBoxWithMargin}"/>
             </StackPanel>
         </StackPanel>
     </Grid>

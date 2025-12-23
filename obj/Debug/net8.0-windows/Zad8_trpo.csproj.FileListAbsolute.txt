@@ -68,3 +68,4 @@ C:\Users\Максим\Desktop\zad8_trpo-main\obj\Debug\net8.0-windows\refint\Zad
 C:\Users\Максим\Desktop\zad8_trpo-main\obj\Debug\net8.0-windows\Zad8_trpo.pdb
 C:\Users\Максим\Desktop\zad8_trpo-main\obj\Debug\net8.0-windows\Zad8_trpo.genruntimeconfig.cache
 C:\Users\Максим\Desktop\zad8_trpo-main\obj\Debug\net8.0-windows\ref\Zad8_trpo.dll
+C:\Users\Максим\Desktop\zad8_trpo-main\obj\Debug\net8.0-windows\Zad8_trpo.sourcelink.json

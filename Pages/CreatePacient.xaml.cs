@@ -50,5 +50,10 @@ namespace Zad8_trpo.Pages
             _pacients.Add(CurrentPacient);
             NavigationService.GoBack();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
+        }
     }
 }

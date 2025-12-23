@@ -9,6 +9,5 @@
     <SolidColorBrush x:Key="HoverBrush" Color="#343A40"/>
     <SolidColorBrush x:Key="WindowBackground" Color="Black"/>
     <SolidColorBrush x:Key="OrangeBrush" Color="Orange"/>
-    <SolidColorBrush x:Key="YellowBrush" Color="Yellow"/>
     <SolidColorBrush x:Key="StackBackground" Color="#2D3030"/>
 </ResourceDictionary>

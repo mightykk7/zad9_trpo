@@ -9,29 +9,30 @@
       Title="StartReceiving">
 
     <Grid>
-        <StackPanel Orientation="Horizontal">
-            <StackPanel>
-                <Label Content="Имя:"/>
-                <Label Content="Фамилия:"/>
-                <Label Content="Отчество:"/>
-                <Label Content="Дата рождения:"/>
-                <Label Content="Номер телефона:"/>
-                <Label Content="Последнее посещение:"/>
-                <Label Content="Последний доктор:"/>
-                <Label Content="Диагноз:"/>
-                <Label Content="Рекомендации:"/>
-                <Button Click="Button_Click_6">Записать</Button>
+        <StackPanel Style="{StaticResource StackPanelHorizontal}">
+            <StackPanel Style="{StaticResource StackPanelVertical}">
+                <Label Content="Имя:" Style="{StaticResource LabelWithMargin}"/>
+                <Label Content="Фамилия:" Style="{StaticResource LabelWithMargin}"/>
+                <Label Content="Отчество:" Style="{StaticResource LabelWithMargin}"/>
+                <Label Content="Дата рождения:" Style="{StaticResource LabelWithMargin}"/>
+                <Label Content="Номер телефона:" Style="{StaticResource LabelWithMargin}"/>
+                <Label Content="Последнее посещение:" Style="{StaticResource LabelWithMargin}"/>
+                <Label Content="Последний доктор:" Style="{StaticResource LabelWithMargin}"/>
+                <Label Content="Диагноз:" Style="{StaticResource LabelWithMargin}"/>
+                <Label Content="Рекомендации:" Style="{StaticResource LabelWithMargin}"/>
+                <Button Click="Button_Click_6" Style="{StaticResource AddButton}">Записать</Button>
+                <Button Content="Назад" Style="{StaticResource BackButton}" Click="Button_Click_1"/>
             </StackPanel>
-            <StackPanel Width="135">
-                <TextBox Margin="0,5" Text="{Binding EnterPacient.Name}" IsEnabled="False"/>
-                <TextBox Margin="0,3" Text="{Binding EnterPacient.LastName}" IsEnabled="False"/>
-                <TextBox Margin="0,3" Text="{Binding EnterPacient.MiddleName}" IsEnabled="False"/>
-                <DatePicker Margin="0,3" SelectedDate="{Binding EnterPacient.Birthday}" IsEnabled="False"/>
-                <TextBox Margin="0,3" Text="{Binding EnterPacient.PhoneNumber}" IsEnabled="False"/>
-                <DatePicker Margin="0,1" SelectedDate="{Binding EnterPacient.LastAppointment}"/>
-                <TextBox  Margin="0,4" Text="{Binding EnterPacient.LastDoctor}" IsEnabled="False"/>
-                <TextBox Margin="0,3" Text="{Binding EnterPacient.Diagnosis}"/>
-                <TextBox Margin="0,3" Text="{Binding EnterPacient.Recomendations}"/>
+            <StackPanel Width="135" Style="{StaticResource StackPanelVertical}">
+                <TextBox Text="{Binding EnterPacient.Name}" IsEnabled="False" Style="{StaticResource TextBoxWithMargin}"/>
+                <TextBox Text="{Binding EnterPacient.LastName}" IsEnabled="False" Style="{StaticResource TextBoxWithMargin}"/>
+                <TextBox Text="{Binding EnterPacient.MiddleName}" IsEnabled="False" Style="{StaticResource TextBoxWithMargin}"/>
+                <DatePicker SelectedDate="{Binding EnterPacient.Birthday}" IsEnabled="False" Style="{StaticResource DatePickerWithMargin}"/>
+                <TextBox Text="{Binding EnterPacient.PhoneNumber}" IsEnabled="False" Style="{StaticResource TextBoxWithMargin}"/>
+                <DatePicker SelectedDate="{Binding EnterPacient.LastAppointment}" Style="{StaticResource DatePickerWithMargin}"/>
+                <TextBox Text="{Binding EnterPacient.LastDoctor}" IsEnabled="False" Style="{StaticResource TextBoxWithMargin}"/>
+                <TextBox Text="{Binding EnterPacient.Diagnosis}" Style="{StaticResource TextBoxWithMargin}"/>
+                <TextBox Text="{Binding EnterPacient.Recomendations}" Style="{StaticResource TextBoxWithMargin}"/>
             </StackPanel>
         </StackPanel>
     </Grid>

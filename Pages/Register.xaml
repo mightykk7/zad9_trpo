@@ -9,23 +9,24 @@
       Title="Register">
 
     <Grid>
-        <StackPanel Orientation="Horizontal" Margin="5">
-            <StackPanel>
-                <Label Content="Имя:"/>
-                <Label Content="Фамилия:"/>
-                <Label Content="Отчество:"/>
-                <Label Content="Специальность:"/>
-                <Label Content="Пароль:"/>
-                <Label Content="Подтверждение пароля:"/>
-                <Button Margin="5" Click="Button_Click">Зарегистрироваться</Button>
+        <StackPanel Style="{StaticResource StackPanelHorizontal}">
+            <StackPanel Style="{StaticResource StackPanelVertical}">
+                <Label Content="Имя:" Style="{StaticResource LabelWithMargin}"/>
+                <Label Content="Фамилия:" Style="{StaticResource LabelWithMargin}"/>
+                <Label Content="Отчество:" Style="{StaticResource LabelWithMargin}"/>
+                <Label Content="Специальность:" Style="{StaticResource LabelWithMargin}"/>
+                <Label Content="Пароль:" Style="{StaticResource LabelWithMargin}"/>
+                <Label Content="Подтверждение пароля:" Style="{StaticResource LabelWithMargin}"/>
+                <Button Click="Button_Click" Style="{StaticResource AddButton}">Зарегистрироваться</Button>
+                <Button Content="Назад" Style="{StaticResource BackButton}" Click="Button_Click_1"/>
             </StackPanel>
-            <StackPanel Width="200">
-                <TextBox Margin="0,3" Text="{Binding CurrentDoctor.Name}"/>
-                <TextBox Margin="0,5" Text="{Binding CurrentDoctor.LastName}"/>
-                <TextBox Margin="0,5" Text="{Binding CurrentDoctor.MiddleName}"/>
-                <TextBox Margin="0,3" Text="{Binding CurrentDoctor.Specialisation}"/>
-                <TextBox Margin="0,5" Text="{Binding CurrentDoctor.Password}"/>
-                <TextBox Margin="0,5" Text="{Binding CurrentDoctor.PasswordConfirm}"/>
+            <StackPanel Width="200" Style="{StaticResource StackPanelVertical}">
+                <TextBox Text="{Binding CurrentDoctor.Name}" Style="{StaticResource TextBoxWithMargin}"/>
+                <TextBox Text="{Binding CurrentDoctor.LastName}" Style="{StaticResource TextBoxWithMargin}"/>
+                <TextBox Text="{Binding CurrentDoctor.MiddleName}" Style="{StaticResource TextBoxWithMargin}"/>
+                <TextBox Text="{Binding CurrentDoctor.Specialisation}" Style="{StaticResource TextBoxWithMargin}"/>
+                <TextBox Text="{Binding CurrentDoctor.Password}" Style="{StaticResource TextBoxWithMargin}"/>
+                <TextBox Text="{Binding CurrentDoctor.PasswordConfirm}" Style="{StaticResource TextBoxWithMargin}"/>
             </StackPanel>
         </StackPanel>
     </Grid>

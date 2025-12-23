@@ -50,5 +50,10 @@ namespace Zad8_trpo.Pages
             MessageBox.Show("Регистрация прошла успешно", $"ID = {CurrentDoctor.Id}", MessageBoxButton.OK, MessageBoxImage.Information);
             NavigationService.GoBack();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
+        }
     }
 }

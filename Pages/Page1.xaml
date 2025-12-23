@@ -6,19 +6,19 @@
       xmlns:local="clr-namespace:Zad8_trpo.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Page1" Background="{DynamicResource WindowBackground}">
+      Title="Page1">
 
     <Grid>
-        <StackPanel Orientation="Horizontal" Margin="5">
-            <StackPanel>
-                <Label Content="ID:" Style="{DynamicResource LabelWithMargin}"/>
-                <Label Content="Пароль:" Style="{DynamicResource LabelWithMargin}"/>
-                <Button Margin="5" Click="Button_Click_1"  Style="{StaticResource StandardButton}">Войти</Button>
-                <Button Margin="5" Click="Button_Click"  Style="{StaticResource StandardButton}">Зарегистрироваться</Button>
+        <StackPanel Style="{StaticResource StackPanelHorizontal}">
+            <StackPanel Style="{StaticResource StackPanelVertical}">
+                <Label Content="ID:" Style="{StaticResource LabelWithMargin}"/>
+                <Label Content="Пароль:" Style="{StaticResource LabelWithMargin}"/>
+                <Button Click="Button_Click_1" Style="{StaticResource StandardButton}">Войти</Button>
+                <Button Click="Button_Click" Style="{StaticResource StandardButton}">Зарегистрироваться</Button>
             </StackPanel>
-            <StackPanel Width="200">
-                <TextBox Margin="0,5" Text="{Binding EnterDoctor.Id}" Style="{StaticResource TextBoxWithMargin}"/>
-                <TextBox Margin="0,5" Text="{Binding EnterDoctor.Password}" Style="{StaticResource TextBoxWithMargin}"/>
+            <StackPanel Width="200" Style="{StaticResource StackPanelVertical}">
+                <TextBox Text="{Binding EnterDoctor.Id}" Style="{StaticResource TextBoxWithMargin}"/>
+                <TextBox Text="{Binding EnterDoctor.Password}" Style="{StaticResource TextBoxWithMargin}"/>
             </StackPanel>
         </StackPanel>
     </Grid>
