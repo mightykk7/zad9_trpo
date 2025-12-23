@@ -1,0 +1,1 @@
+{"Id":20780,"Name":"\u041C\u0430\u043A\u0441\u0438\u043C","LastName":"\u0420\u0430\u0442\u043E\u0432\u0441\u043A\u0438\u0439","MiddleName":"\u0412\u0438\u0442\u0430\u043B\u044C\u0435\u0432\u0438\u0447","Specialisation":"\u0412\u0440\u0430\u0447","Password":"123","PasswordConfirm":"123"}
